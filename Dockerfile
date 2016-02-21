@@ -5,7 +5,7 @@ RUN apt-get -y install node.js
 RUN apt-get -y install nodejs-legacy
 RUN apt-get -y install npm
 RUN npm install -g bower
-RUN bower install
+RUN bower install --allow-root
 RUN npm install -g superstatic
 COPY . /src
 WORKDIR src/
