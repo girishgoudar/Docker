@@ -1,0 +1,27 @@
+<div class="ms-Grid">
+  <div class="ms-Grid-row">
+    <div class="ms-Grid-col ms-u-lg12">
+      <div class="ms-font-su">Contacts</div>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-xl">First Name</span>
+          <span class="ms-Table-cell ms-font-xl">Last Name</span>
+          <span class="ms-Table-cell ms-font-xl">E-mail</span>
+          <span class="ms-Table-cell ms-font-xl">Edit</span>
+          <span class="ms-Table-cell ms-font-xl">Delete</span>
+        </div>
+        <div class="ms-Table-row" data-ng-repeat="contact in contacts">
+          <span class="ms-Table-cell ms-font-xl">{{contact.GivenName}}</span>
+          <span class="ms-Table-cell ms-font-xl">{{contact.Surname}}</span>
+          <span class="ms-Table-cell ms-font-xl">{{contact.EmailAddresses[0].Address}}</span>
+          <span class="ms-Table-cell ms-font-xl"><input type="button" class="ms-bgColor-themePrimary ms-fontColor-white" value="Edit" ng-click="editUser(contact.Id)" /></span>
+          <span class="ms-Table-cell ms-font-xl"><input type="button" class="ms-bgColor-themePrimary ms-fontColor-white" value="Delete" ng-click="deleteUser(contact.Id)" /></span>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+ <a class="ms-Button; ms-bgColor-themePrimary ms-fontColor-white" href="/#/contacts/new">Add new contact</a>
+ 
+ 
